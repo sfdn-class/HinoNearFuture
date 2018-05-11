@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- display_marker.html -->
+<html>
+<head>
+    <title>Google Maps API最初の一歩</title>
+    <meta charset="utf-8">
+
+    <!-- ちゃんと等倍で表示しましょうよ．スマホ側で勝手に倍率変えんなよ，という意味 -->
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- この中身は後からJavaScriptでも変更可能だったりする -->
+
+    <!-- Google Maps APIをWeb上から読んでくる -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- 自分で作ったJSファイル -->
+    <script type="text/javascript" src="./test_js.js"></script>
+
+    <!-- とりあえずCSSを直接書いてしまう -->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            /*
+             div id=mapになってるdiv
+             ここに地図
+             高さ500ピクセル，幅は上位のdiv(ここではbody)の50%
+            */
+            height: 500px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+  <!-- bodyの中には地図表示用のマップ一つだけ -->
+  <div id="map"></div>
+</body>
+</html>
