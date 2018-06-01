@@ -4,11 +4,11 @@
 	 viewBox="0 0 610.6 463.2" style="enable-background:new 0 0 610.6 463.2;" xml:space="preserve">
 <style type="text/css">
 	.st0{display:none;}
-	.st1{display:inline;opacity:0.0;fill:#231815;}
-	.st2{fill:#DBD836;}
-	.st3{fill:#316030;}
-	.st4{fill:#2CB34B;}
-	.st5{fill:#A86D3D;}
+	.st1{display:inline;opacity:0.5;fill:#231815;}
+	.st2{fill:#DBD836;opacity:0.5;}
+	.st3{fill:#316030;opacity:0.5;}
+	.st4{fill:#2CB34B;opacity:0.5;}
+	.st5{fill:#A86D3D;opacity:0.5;}
 	.st6{fill:#B4DBAE;}
 	.st7{display:none;fill:#B4DBAE;}
 	.st8{fill:#8C8D35;}

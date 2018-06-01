@@ -14,19 +14,20 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   };
   // 地図を保持するためのconstオブジェクトmyMapを宣言し，
   // GoogleMapsのコンストラクタの引数に，先に定義した地図表示に必要なパラメータを食わせる
-  window.myMap = new google.maps.Map(document.getElementById('map'), mapElement);
+    const myMap = new google.maps.Map(document.getElementById('map'), mapElement);
   // コンストラクタが実行されると表示される
 
-
+    let overlay;
     USGSOverlay.prototype = new google.maps.OverlayView();
 
     const bounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(35.691747, 139.357072),
-      new google.maps.LatLng(35.639345, 139.441536));
+      new google.maps.LatLng(35.639345, 139.357072),
+      new google.maps.LatLng(35.691747, 139.441536));
 
-    const srcSVG = './map_masterplan.png';
+    const srcSVG = './map_masterplan.svg';
 
-    const overlay = new USGSOverlay(bounds,srcSVG,window.myMap);
+    overlay = new USGSOverlay(bounds,srcSVG,myMap);
+
 
     function USGSOverlay(bounds, image, map) {
           // Initialize all properties.
