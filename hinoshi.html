@@ -36,7 +36,7 @@
   </div><!--column-->
 
   <div id="category">
-    <h3 id="#a1">あなたにオススメの住居地を紹介します。選択してください。</h3>
+    <h2 id="#a1">あなたにオススメの住居地を紹介します。選択してください。</h2>
 
       <form id="Question">
              <a href="#a1" onclick="imageClick(1);"><img src="./images/hito.png" class = "radio_image" width = "100" height = "100"/></a>
@@ -54,8 +54,28 @@
   <!--日野市のマップ-->
 </div><!--main-->
 
-<div id="footer">
-  <p>最後までご覧頂き、ありがとうございました。うんちゃらかんちゃら</p>
+<div id="footer"><!--お問い合わせフォーム-->
+  <!--<p>最後までご覧頂き、ありがとうございました。うんちゃらかんちゃら</p>-->
+  <p>日野市へのご意見等ございましたらうんちゃらかんちゃら</p>
+  <h2>お問い合わせ</h2>
+
+  <form action = "" method = "post">
+    <div id = "name">
+      <label for = "name">氏名</label>
+      <input type = "text" id = "name" name = "user_name">
+    </div>
+    <div>
+      <label for = "mail">Eメールアドレス</label>
+      <input type = "e-mail" id = "mail" name = "user_mail">
+    </div>
+    <div>
+      <label for = "msg">意見・ご要望</label>
+      <textarea id = "msg" name = "user_message" ></textarea>
+    </div>
+    <div class = "button">
+      <button type = "submit">送信</button>
+    </div>
+  </form>
 </div><!--footer-->
 
 </body>
