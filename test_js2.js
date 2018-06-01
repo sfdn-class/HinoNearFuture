@@ -46,19 +46,26 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
     USGSOverlay.prototype.onAdd = function() {
 
-          var div = document.createElement('div');
+          let div = document.createElement('div');
           div.style.borderStyle = 'none';
           div.style.borderWidth = '0px';
           div.style.position = 'absolute';
 
           // Create the img element and attach it to the div.
-          var img = document.createElement('img');
-          img.src = this.image_;
-          img.style.width = '100%';
-          img.style.height = '100%';
-          img.style.position = 'absolute';
-          div.appendChild(img);
+          window.obj = document.createElement('div');
+          obj.id = 'customsvg';
+          //obj.data = this.image_;
+          //obj.type = "image/svg+xml";
+          obj.style.width = '100%';
+          obj.style.height = '100%';
+          obj.style.position = 'absolute';
+          div.appendChild(obj);
 
+
+          	$("#customsvg").load("./map_masterplan.svg svg", function(){
+
+          	});
+          
           this.div_ = div;
 
           // Add the element to the "overlayLayer" pane.
@@ -79,8 +86,11 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
           var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
 
-          // Resize the image's div to fit the indicated dimensions.
-
+          var div = this.div_;
+          div.style.left = sw.x + 'px';
+          div.style.top = ne.y + 'px';
+          div.style.width = (ne.x - sw.x) + 'px';
+          div.style.height = (sw.y - ne.y) + 'px';
     };
 
     USGSOverlay.prototype.onRemove = function() {
@@ -88,8 +98,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           this.div_ = null;
     };
 
-
+    //google.maps.event.addDomListener(window, 'load', window.myMap);
 
 } // window.addEventListenerに登録する関数オブジェクトの記述ここまで
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
-google.maps.event.addDomListener(window, 'load', window.myMap);
