@@ -107,8 +107,66 @@ body {
 	display: inline-block;
 }
 
+#Question label {
+    /*padding-top: 100px ;*/
+    padding:  0 auto;
+    line-height: 450%;
+    /*background-color: rgba(0,0,0,0.5);*/
+}
 
+#footer{
+  margin: 250px auto;
+}
 
+#footer form{
+  margin : 0 auto;
+  padding : 1em;
+  background-color: #ffffff;
+}
+
+#footer h2{
+  margin : 0 auto ;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#footer form div {
+  margin-top : 3em;
+  margin-left: 10em;
+  text-align: justify;
+}
+
+#footer label{
+  display : inline-block;
+  width: 15%;
+  text-align : right;
+}
+
+#footer input, textarea{
+   font : 1em sans-serif;
+   width : 60%;
+   box-sizing: border-box;
+   border: 1px solid #999;
+   border-radius : 0.5em;
+}
+
+#footer input,textarea{
+  vertical-align: top;
+  height: 3em;
+}
+
+#footer textarea{
+  vertical-align: top;
+  height: 15em;
+}
+
+#footer .button{
+  padding-left:  110px;
+}
+
+#footer button{
+  margin-left: .5em;
+}
 
 #footer p{
     margin: 0;
