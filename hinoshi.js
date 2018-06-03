@@ -1,4 +1,34 @@
 // hinoshi.js
+
+var up_timer;
+
+function getPosition(){
+	horizontal = document.body.scrollLeft || document.documentElement.scrollLeft;
+	vertical = document.body.scrollTop  || document.documentElement.scrollTop;
+}
+
+function pageup(x,y){
+	if (up_timer) {
+		clearTimeout(up_timer);
+	}
+	if (y >= 1) {
+		getPosition();
+		var divisionY = (vertical-(vertical/7));
+		var Y = Math.floor(divisionY);
+		window.scrollTo(horizontal,Y);
+		up_timer = setTimeout("pageup("+horizontal+","+Y+")",10);
+	} else {
+		window.scrollTo(horizontal,0);
+		clearTimeout(up_timer);
+	}
+}
+
+function scrollup(){
+	getPosition();
+	pageup(horizontal,vertical);
+}
+
+
 //let answer = new Array(10);
 
 //let buttonCounter = 0; //カウンタ変数
@@ -93,7 +123,7 @@ function onClickButton(){
   let v = radioNodeList.value;
   alert(v);//選択したものをポップアップで表示
 
-  if(buttonCounter == 0){//１回目の書き換え//Array[0]//自然と触れ合える地域    
+  if(buttonCounter == 0){//１回目の書き換え//Array[0]//自然と触れ合える地域
 
     if(v == 'a'){//人を選択した場合
        document.getElementById("Question").innerHTML =
