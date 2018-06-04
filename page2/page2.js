@@ -1,4 +1,5 @@
-// hinoshi.js
+// page2.js
+
 
 var up_timer;
 

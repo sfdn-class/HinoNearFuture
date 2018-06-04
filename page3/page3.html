@@ -1,13 +1,15 @@
+<!-- page3.html -->
+
 <!DOCTYPE html>
-<!-- hinoshi.html -->
+<!-- page1.html -->
 <html lang="ja">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>将来の日野市を想像してみる</title>
+    <title>将来の日野市を想像してみる/お問い合わせフォーム</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.S0">
-    <script type="text/javascript" src="./hinoshi.js"></script>
-    <link rel="stylesheet" href="./hinoshi.css"/>
+    <script type="text/javascript" src="./page3.js"></script>
+    <link rel="stylesheet" href="./page3.css"/>
 
 </head>
 <body>
@@ -15,7 +17,6 @@
 
   <h1>
     　<font size="41" >めぐり来る</br>京の季節に</br>包まれる別邸</br></font></h1>
-
     <p>
 ゆったりと流れる大堰川を遡り、たどり着く。</br>
 幽玄という言葉の持つ神秘性は、</br>
@@ -23,65 +24,35 @@
 霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
 季節に染められていく、たおやかな時間。</br>
     </p>
-
   </div><!--header-->
 
-  <div id="column1">
-    <h2>川は</br>記憶を辿る道</h2>
-<p>
-    ゆったりと流れる大堰川を遡り、たどり着く。</br>
-    幽玄という言葉の持つ神秘性は、</br>
-    京都の奥深さをどうにか捉えようとしたものか。</br>
-    霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
-    季節に染められていく、たおやかな時間。</br>
-</p>
-</div><!--column1-->
+  <div id="Question">
+    <h2>お問い合わせ</h2>
 
-<div id="photos2">
-    <img src="./images/background2.png" alt="写真">
-</div><!--photos2-->
-
-<div id="column2">
-  <h2>川は</br>記憶を辿る道</h2>
-<p>
-  ゆったりと流れる大堰川を遡り、たどり着く。</br>
-  幽玄という言葉の持つ神秘性は、</br>
-  京都の奥深さをどうにか捉えようとしたものか。</br>
-  霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
-  季節に染められていく、たおやかな時間。</br>
-</p>
-
-<p>
-  ゆったりと流れる大堰川を遡り、たどり着く。</br>
-  幽玄という言葉の持つ神秘性は、</br>
-  京都の奥深さをどうにか捉えようとしたものか。</br>
-  霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
-  季節に染められていく、たおやかな時間。</br>
-</p>
-</div><!--column2-->
-
-
-<div id="photos3">
-</div><!--photos3-->
-
-
-<div id="column3">
-  <h2>川は</br>記憶を辿る道</h2>
-<p>
-  ゆったりと流れる大堰川を遡り、たどり着く。</br>
-  幽玄という言葉の持つ神秘性は、</br>
-  京都の奥深さをどうにか捉えようとしたものか。</br>
-  霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
-  季節に染められていく、たおやかな時間。</br>
-</p>
-</div><!--column3-->
-
+    <form action = "" method = "post">
+      <div id = "name">
+        <label for = "name">氏名</label>
+        <input type = "text" id = "name" name = "user_name">
+      </div>
+      <div>
+        <label for = "mail">Eメールアドレス</label>
+        <input type = "e-mail" id = "mail" name = "user_mail">
+      </div>
+      <div>
+        <label for = "msg">意見・ご要望</label>
+        <textarea id = "msg" name = "user_message" ></textarea>
+      </div>
+      <div class = "button">
+        <button type = "submit">送信</button>
+      </div>
+    </form>
+</div><!--Question-->
 
 
 
 <div id="footer"><!--別ページへのリンク-->
   <ul class="nav">
-      <li class="page__item"><a href="#">
+      <li class="page__item"><a href="../page1/page1.html">
         <img src="./images/background2.png" alt="写真"></a>
         <h3>PRODUCT</h3>
         <p>
@@ -90,7 +61,7 @@
         京都の奥深さをどうにか捉えようとしたものか。</br>
         霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
         季節に染められていく、たおやかな時間。</br></p></li>
-      <li class="page__item2"><a href="#">
+      <li class="page__item2"><a href="../page2/page2.html">
         <img src="./images/background2.png" alt="写真"></a>
         <h3>WORK</h3>
         <p>  ゆったりと流れる大堰川を遡り、たどり着く。</br>
@@ -98,7 +69,7 @@
         京都の奥深さをどうにか捉えようとしたものか。</br>
         霞の中に浮かぶ新緑、あるいは紅葉の赤、黄、雪の白。</br>
         季節に染められていく、たおやかな時間。</br></p></li>
-      <li class="page__item3"><a href="#">
+      <li class="page__item3"><a href="../page3/page3.html">
         <img src="./images/background2.png" alt="写真"></a>
         <h3>RECRUIT</h3>
         <p>  ゆったりと流れる大堰川を遡り、たどり着く。</br>

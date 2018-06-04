@@ -1,4 +1,4 @@
-/*hinoshi.css*/
+/*page1.css*/
 @charset "UTF-8";
 html, body {
     height: 100%;
@@ -6,6 +6,7 @@ html, body {
     margin-right: auto;
     margin-left: auto;
     font-family: serif;
+    line-height: 2;
 }
 body {
     background-image: url("./images/background.jpeg");
@@ -23,16 +24,16 @@ body {
 #header h1{
     /*background-color: rgb(255,255,255);*/
     max-width: 100%;
-    margin-left: 80px ;
+    margin-left: 100px ;
     margin-right: 100px ;
     margin-top: 150px;
     padding: 0;
+    line-height: 1.5;
 }
 
 #header p{
     margin:0;
     padding: 80px 100px;
-    line-height: 2;
 }
 
 #column1{/*立地適正化計画とは？*/
@@ -95,7 +96,7 @@ body {
 
 #footer{
   margin: 0;
-  padding: 10px  0;
+  padding: 10px  0 0 0;
     background: #ffffff;
     position: relative;
 }
@@ -128,7 +129,7 @@ padding:0;
   top: 35%;
   left: 0;
 margin:0;
-padding:0;
+line-height: 1.5;
 }
 #footer .nav .page__item img{
     width: 100%;
@@ -156,6 +157,7 @@ padding:0;
   top: 35%;
 margin:0;
 padding:0;
+line-height: 1.5;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -183,6 +185,7 @@ padding:0;
   top: 35%;
 margin:0;
 padding:0;
+line-height: 1.5;
 }
 #footer .nav .page__item3 img{
     width: 100%;
