@@ -1,5 +1,5 @@
 // display_marker.js
-
+window.count = 0;
 // window.addEventListenerに関数オブジェクトを登録しておくと，
 // 全部のコンテンツの読み込みが終了した時に自動的に，
 // 登録しておいた関数オブジェクトが次々と呼ばれる
@@ -14,25 +14,22 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   };
   // 地図を保持するためのconstオブジェクトmyMapを宣言し，
   // GoogleMapsのコンストラクタの引数に，先に定義した地図表示に必要なパラメータを食わせる
-    const myMap = new google.maps.Map(document.getElementById('map'), mapElement);
+    window.myMap = new google.maps.Map(document.getElementById('map'), mapElement);
   // コンストラクタが実行されると表示される
 
-    let overlay;
+    //let overlay;
     USGSOverlay.prototype = new google.maps.OverlayView();
 
     const bounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(35.639345, 139.357072),
-      new google.maps.LatLng(35.691747, 139.441536));
+      new google.maps.LatLng(35.639245, 139.356940),
+      new google.maps.LatLng(35.691640, 139.441536));
 
-    const srcSVG = './map_masterplan.svg';
-
-    overlay = new USGSOverlay(bounds,srcSVG,myMap);
+    window.overlay = new USGSOverlay(bounds,window.myMap);
 
 
-    function USGSOverlay(bounds, image, map) {
+    function USGSOverlay(bounds, map) {
           // Initialize all properties.
           this.bounds_ = bounds;
-          this.image_ = image;
           this.map_ = map;
 
           // Define a property to hold the image's div. We'll
@@ -52,26 +49,26 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           div.style.position = 'absolute';
 
           // Create the img element and attach it to the div.
-          window.obj = document.createElement('div');
+          obj = document.createElement('div');
           obj.id = 'customsvg';
-          //obj.data = this.image_;
-          //obj.type = "image/svg+xml";
           obj.style.width = '100%';
           obj.style.height = '100%';
           obj.style.position = 'absolute';
           div.appendChild(obj);
-
-
-          	$("#customsvg").load("./map_masterplan.svg svg", function(){
-
-          	});
-          
           this.div_ = div;
 
-          // Add the element to the "overlayLayer" pane.
+          // Add the element to the 'overlayLayer' pane.
           var panes = this.getPanes();
           panes.overlayLayer.appendChild(div);
+
+          //svg読み込み
+          window.svgctrl = $("#customsvg")
+          window.svgctrl.load("./map_masterplan.svg svg", function(){
+          window.st2 = window.svgctrl.find(".st2");
+          });
     };
+
+
 
     USGSOverlay.prototype.draw = function() {
 
@@ -91,6 +88,8 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           div.style.top = ne.y + 'px';
           div.style.width = (ne.x - sw.x) + 'px';
           div.style.height = (sw.y - ne.y) + 'px';
+
+
     };
 
     USGSOverlay.prototype.onRemove = function() {
@@ -98,7 +97,15 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           this.div_ = null;
     };
 
-    //google.maps.event.addDomListener(window, 'load', window.myMap);
-
 } // window.addEventListenerに登録する関数オブジェクトの記述ここまで
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
+
+
+
+
+function but(){
+  window.st2.css('opacity', '0.0');
+}
+function but2(){
+  window.st2.css('opacity', '1.0');
+}
