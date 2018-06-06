@@ -64,7 +64,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           //svg読み込み
           window.svgctrl = $("#customsvg")
           window.svgctrl.load("./map_masterplan.svg svg", function(){
-          window.st2 = window.svgctrl.find(".st2");
+          window.st3 = window.svgctrl.find(".st3");
           });
     };
 
@@ -101,11 +101,22 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
 
 
-
+let i = 1.0;
 
 function but(){
-  window.st2.css('opacity', '0.0');
+    i -= 0.1;
+    let stopId = setTimeout(but,20);
+      if(i<0.0){
+        clearTimeout(stopId);
+      }
+    window.st3.css('opacity',i);
 }
+
 function but2(){
-  window.st2.css('opacity', '1.0');
+  i += 0.1;
+  let stopId2 = setTimeout(but2,20);
+    if(i>0.5){
+      clearTimeout(stopId2);
+    }
+  window.st3.css('opacity',i);
 }
