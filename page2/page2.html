@@ -6,6 +6,12 @@
     <title>将来の日野市を想像してみる/Map</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.S0">
+    <!--Jqueryよみこみ-->
+    <script src="./../jquery-3.3.1.min.js"></script>
+    <!-- Google Maps APIをWeb上から読んでくる -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- 自分で作ったJSファイル -->
+    <script type="text/javascript" src="./test_js2.js"></script>
     <script type="text/javascript" src="./page2.js"></script>
     <link rel="stylesheet" href="./page2.css"/>
 </head>
@@ -38,16 +44,16 @@
   <h2>あなたにオススメの住居地を紹介します。選択してください。</h2>
 
     <form id="Question">
-           <a href="#a1" onclick="imageClick(1);"><img src="./images/hito.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(2);"><img src="./images/kuruma.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(3);"><img src="./images/densya.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(4);"><img src="./images/sizenn.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(5);"><img src="./images/tiiki.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(6);"><img src="./images/sonota.png" class = "radio_image" width = "100" height = "100"/></a>
+           <a href="#a1" onclick="imageClick(1);"><img src="./../images/hito.png" class = "radio_image" width = "100" height = "100"/></a>
+           <a href="#a1" onclick="imageClick(2);"><img src="./../images/kuruma.png" class = "radio_image" width = "100" height = "100"/></a>
+           <a href="#a1" onclick="imageClick(3);"><img src="./../images/densya.png" class = "radio_image" width = "100" height = "100"/></a>
+           <a href="#a1" onclick="imageClick(4);"><img src="./../images/sizenn.png" class = "radio_image" width = "100" height = "100"/></a>
+           <a href="#a1" onclick="imageClick(5);"><img src="./../images/tiiki.png" class = "radio_image" width = "100" height = "100"/></a>
+           <a href="#a1" onclick="imageClick(6);"><img src="./../images/sonota.png" class = "radio_image" width = "100" height = "100"/></a>
     </form><!--question終わり-->
 </div><!--category-->
 
-<div id="Map">
+<div id="map">
 </div><!--Map-->
 
 <div id="column2"><!--Mapで書き換わる内容-->

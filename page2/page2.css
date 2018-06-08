@@ -70,6 +70,13 @@ html, body {
     line-height: 450%;
     /*background-color: rgba(0,0,0,0.5);*/
 }
+
+#map {
+  margin: auto;
+    height: 500px;
+    width: 50%;
+}
+
 #column2{
   margin:0;
   padding: 80px 100px;
