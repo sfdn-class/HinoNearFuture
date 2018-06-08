@@ -1,0 +1,181 @@
+/* page2.css */
+@charset "UTF-8";
+html, body {
+    height: 100%;
+    max-width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: serif;
+		line-height: 2;
+    text-align:center;
+}
+#header{
+  margin:120px 0;
+}
+
+#header h1{
+    max-width: 100%;
+    margin-left: 100px ;
+    margin-right: 100px ;
+    margin-top: 150px;
+    padding: 0;
+		line-height: 1.5;
+}
+
+#header p{
+    margin:0;
+    padding: 80px 100px;
+}
+#column1{/*立地適正化計画とは？*/
+  margin:0;
+  padding: 80px 100px;
+  background-color: #ffffff;
+}
+
+#column1 h2{
+    margin: 0;
+    padding: 120px 100px 70px 100px;
+}
+
+#column1 p{
+    margin: 0;
+    padding: 30px 100px 80px 100px;
+}
+
+#Question {
+	width:   100%;
+	min-width: 640px;
+	margin:  auto;
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -o-box;
+	display: -ms-box;
+	box-pack: justify;
+	-moz-box-pack: justify;
+	-webkit-box-pack: justify;
+	-o-box-pack: justify;
+	-ms-box-pack: justify;
+}
+.radio_image {
+	width: 10%;
+	height: 10%;
+  padding: 45px;
+	display: inline-block;
+}
+
+#Question label {
+    /*padding-top: 100px ;*/
+    padding:  0 auto;
+    line-height: 450%;
+    /*background-color: rgba(0,0,0,0.5);*/
+}
+#column2{
+  margin:0;
+  padding: 80px 100px;
+  background-color: #ffffff;
+}
+
+#column2 h2{
+    margin: 0;
+    padding: 120px 100px 70px 100px;
+}
+
+#column2 p{
+    margin: 0;
+    padding: 30px 100px 80px 100px;
+}
+#footer{
+  margin: 0;
+  padding: 10px  0;
+    background: #ffffff;
+    position: relative;
+}
+#footer .nav {
+ display: flex;
+ width: 100%;
+ padding: 0;
+ margin: 0;
+}
+#footer .nav .page__item {
+  width: calc(100% / 3);
+  margin: 0;
+  list-style: none;
+  background: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #CCC;
+}
+#footer .nav .page__item h3{
+  width: calc(100% / 3);
+  position: absolute;/*絶対配置*/
+  top:17%;
+  left: 0;
+margin:0;
+padding:0;
+}
+#footer .nav .page__item p{
+  width: calc(100% / 3);
+  position: absolute;/*絶対配置*/
+  top: 35%;
+  left: 0;
+margin:0;
+padding:0;
+}
+#footer .nav .page__item img{
+    width: 100%;
+}
+
+#footer .nav .page__item2 {
+  width: calc(100% / 3);
+  margin: 0;
+  list-style: none;
+  background: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #CCC;
+}
+#footer .nav .page__item2 h3{
+  width: calc(100% / 3);
+  position: absolute;/*絶対配置*/
+  top:17%;
+margin:0;
+padding:0;
+}
+#footer .nav .page__item2 p{
+  width: calc(100% / 3);
+  position: absolute;/*絶対配置*/
+  top: 35%;
+margin:0;
+padding:0;
+}
+#footer .nav .page__item2 img{
+    width: 100%;
+}
+
+#footer .nav .page__item3 {
+  width: calc(100% / 3);
+  margin: 0;
+  list-style: none;
+  background: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #CCC;
+}
+#footer .nav .page__item3 h3{
+  width: calc(100% / 3);
+  position: absolute;/*絶対配置*/
+  top:17%;
+margin:0;
+padding:0;
+}
+#footer .nav .page__item3 p{
+  width: calc(100% / 3);
+  position: absolute;/*絶対配置*/
+  top: 35%;
+margin:0;
+padding:0;
+}
+#footer .nav .page__item3 img{
+    width: 100%;
+}
