@@ -76,20 +76,36 @@ html, body {
   background-color: #ffffff;
 }
 
+#column2{
+  margin:0;
+  padding: 190px 100px 150px;
+  background-color: #ffffff;
+}
+
+
 #column2 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
+}
+
+
+#column2 img{
+  width: 60%;
 }
 
 #column2 p{
     margin: 0;
-    padding: 30px 100px 80px 100px;
+    padding-top: 0;
+    padding-bottom: 40px;
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
 }
 #footer{
   margin: 0;
-  padding: 10px  0;
+  padding: 10px  0 0 0;
     background: #ffffff;
     position: relative;
+    color: white;
+
 }
 #footer .nav {
  display: flex;
@@ -109,18 +125,19 @@ html, body {
 #footer .nav .page__item h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-  left: 0;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-  left: 0;
-margin:0;
-padding:0;
+  top: 43%;
+  margin:0;
+  padding:0;
+  line-height: 2.3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item img{
     width: 100%;
@@ -138,16 +155,19 @@ padding:0;
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item2 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -165,16 +185,19 @@ padding:0;
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item3 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item3 img{
     width: 100%;

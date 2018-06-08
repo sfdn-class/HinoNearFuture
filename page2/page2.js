@@ -198,8 +198,11 @@ function onClickButton(){
 	   document.getElementById("Question").innerHTML =
 	    "<p>3回目の書き換え．<br />最初に戻ります．</p>";
 	     buttonCounter = 0;
-  }*/
+  }
 }
+
+
+
 
 
 
