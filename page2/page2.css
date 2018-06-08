@@ -43,38 +43,52 @@ html, body {
 }
 
 #Question {
-	width:   100%;
-	min-width: 640px;
+	width:   80%;
+  height: 100px;
 	margin:  auto;
-	display: box;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -o-box;
-	display: -ms-box;
-	box-pack: justify;
-	-moz-box-pack: justify;
-	-webkit-box-pack: justify;
-	-o-box-pack: justify;
-	-ms-box-pack: justify;
-}
-.radio_image {
-	width: 10%;
-	height: 10%;
-  padding: 45px;
-	display: inline-block;
+  overflow: hidden;
 }
 
-#Question label {
-    /*padding-top: 100px ;*/
-    padding:  0 auto;
-    line-height: 450%;
-    /*background-color: rgba(0,0,0,0.5);*/
+#mask{
+  width: 200%;
+  height: 100%;
+
+}
+
+#item1{
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: #ffffff;
+  display: flex;
+
+
+}
+
+#item2{
+  width: 50%;
+  height: 100%;
+  margin-left: -50%;
+  float: left;
+  background-color: #ffffff;
+  display: flex;
+  justify-content:center;
+}
+
+
+
+#test1{
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  background-color: #a870d4;
 }
 
 #map {
   margin: auto;
-    height: 500px;
-    width: 50%;
+  width: calc(80vmax);
+  height: calc(80vmax*0.8);
+
 }
 
 #column2{

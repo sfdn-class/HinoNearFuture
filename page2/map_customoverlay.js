@@ -6,11 +6,15 @@ window.count = 0;
 window.addEventListener('load', () => { //登録する関数オブジェクト記述開始
   //地図表示に必要なパラメータを保持するconstオブジェクト
 
+  const bounds = new google.maps.LatLngBounds(
+    new google.maps.LatLng(35.639245, 139.356940),
+    new google.maps.LatLng(35.691640, 139.441536));
+
   const mapElement = {
     // 日野キャンパス2号館をの緯度経度を中心にして表示する
-    center: {lat:35.661504, lng:139.367559},
+    center: {lat:(35.691640 + 35.639245)/2, lng:(139.441536 + 139.356940)/2},
     // ズームレベル
-    zoom: 16
+    zoom: 14
   };
   // 地図を保持するためのconstオブジェクトmyMapを宣言し，
   // GoogleMapsのコンストラクタの引数に，先に定義した地図表示に必要なパラメータを食わせる
@@ -20,9 +24,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
     //let overlay;
     USGSOverlay.prototype = new google.maps.OverlayView();
 
-    const bounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(35.639245, 139.356940),
-      new google.maps.LatLng(35.691640, 139.441536));
+
 
     window.overlay = new USGSOverlay(bounds,window.myMap);
 
@@ -63,7 +65,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
           //svg読み込み
           window.svgctrl = $("#customsvg")
-          window.svgctrl.load("./map_masterplan.svg svg", function(){
+          window.svgctrl.load("images/map_masterplan.svg svg", function(){
           window.st2 = window.svgctrl.find(".st2");
           });
     };

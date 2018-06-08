@@ -63,7 +63,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
           //svg読み込み
           window.svgctrl = $("#customsvg")
-          window.svgctrl.load("./map_masterplan.svg svg", function(){
+          window.svgctrl.load("../page2/map_masterplan.svg svg", function(){
           window.st3 = window.svgctrl.find(".st3");
           });
     };
