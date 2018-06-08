@@ -21,8 +21,8 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
     USGSOverlay.prototype = new google.maps.OverlayView();
 
     const bounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(35.639245, 139.356940),
-      new google.maps.LatLng(35.691640, 139.441536));
+      new google.maps.LatLng(35.638045, 139.356940),
+      new google.maps.LatLng(35.691620, 139.441536));
 
     window.overlay = new USGSOverlay(bounds,window.myMap);
 
@@ -87,7 +87,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           div.style.left = sw.x + 'px';
           div.style.top = ne.y + 'px';
           div.style.width = (ne.x - sw.x) + 'px';
-          div.style.height = (sw.y - ne.y) + 'px';
+          div.style.height = (ne.y - sw.y) + 'px';
 
 
     };
