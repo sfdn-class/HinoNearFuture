@@ -10,14 +10,14 @@ function hitoClick(){
 	'<p><input type="submit" value="次へ" onClick="onClickButton()"></p>';
 
 	$('#item2').animate({
-	    'marginLeft': '50%'
+	    'marginLeft': '100%'
 	},500,function(){});
 }
 
 
 function but(){
 	$('#item2').animate({
-	    'marginLeft': '-50%'
+	    'marginLeft': '0%'
 	});
 }
 
