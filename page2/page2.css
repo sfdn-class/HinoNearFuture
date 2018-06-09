@@ -46,6 +46,7 @@ html, body {
 	width:  36em;
   height: 6em;
 	margin:  auto;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -56,16 +57,19 @@ html, body {
   background-color: #ffffff;
   position: absolute;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-.radio_image{
+.button{
   width: 5em;
   height: 5em;
+  background-color: #346128;
+  border-radius: 10px;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   #Question {
   	width:  18em;
     height: 12em;
@@ -78,7 +82,7 @@ html, body {
 #map {
   margin: auto;
   width: 80%;
-  height: calc(80vmin);
+  height: calc(70vmin);
 
 }
 
