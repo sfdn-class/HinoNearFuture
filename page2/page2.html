@@ -6,8 +6,15 @@
     <title>将来の日野市を想像してみる/Map</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.S0">
+    <!--Jqueryよみこみ-->
+    <script src="./../jquery-3.3.1.min.js"></script>
+    <!-- Google Maps APIをWeb上から読んでくる -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- 自分で作ったJSファイル -->
+    <script type="text/javascript" src="./map_customoverlay.js"></script>
     <script type="text/javascript" src="./page2.js"></script>
     <link rel="stylesheet" href="./page2.css"/>
+    
 </head>
 <body>
   　<div id="header">
@@ -26,19 +33,24 @@
 
 <div id="category">
   <h2>あなたが住みたい地域や、興味のある特徴を選択してみましょう。</h2>
-
-    <form id="Question">
-           <a href="#a1" onclick="imageClick(1);"><img src="./images/hito.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(2);"><img src="./images/kuruma.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(3);"><img src="./images/densya.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(4);"><img src="./images/sizenn.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(5);"><img src="./images/tiiki.png" class = "radio_image" width = "100" height = "100"/></a>
-           <a href="#a1" onclick="imageClick(6);"><img src="./images/sonota.png" class = "radio_image" width = "100" height = "100"/></a>
-    </form><!--question終わり-->
+  <div id="map">
+  </div><!--Map-->
+    <div id="Question">
+            <div id = "item1">
+              <div id="itemButtons1" class="item"></div>
+            </div>
+            <div id="item2" id = "item2">
+              <div id="itemButtons2" class="item">
+                <a href="#a1" id="category1" class="button" onclick="hitoClick();"><p class="butText">人と暮らす</p></a>
+                <a href="#a1" id="category1" class="button" onclick="kurumaClick();"><p class="butText">自動車を使う</p></a>
+                <a href="#a1" id="category1" class="button" onclick="densyaClick();"><p class="butText">公共交通を使う</p></a>
+                <a href="#a1" id="category1" class="button" onclick="sizennClick();"><p class="butText">自然と暮らす</p></a>
+                <a href="#a1" id="category1" class="button" onclick="tiikiClick();"><p class="butText">地域内が便利</p></a>
+                <a href="#a1" id="category1" class="button" onclick="sonotaClick();"><p class="butText">その他</p></a>
+              </div>
+            </div>
+    </div>
 </div><!--category-->
-
-<div id="Map">
-</div><!--Map-->
 
 <div id="column2"><!--Mapで書き換わる内容-->
 
