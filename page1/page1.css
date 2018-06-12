@@ -23,7 +23,6 @@ body {
 }
 
 #header h1{
-    /*background-color: rgb(255,255,255);*/
     max-width: 100%;
     margin-left: 100px ;
     margin-right: 100px ;
@@ -129,7 +128,6 @@ body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item h3{
   width: calc(100% / 3);
@@ -159,7 +157,6 @@ body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
@@ -189,7 +186,6 @@ body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);

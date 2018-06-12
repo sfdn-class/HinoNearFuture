@@ -1,25 +1,5 @@
 // page2.js
 
-function hitoClick(){
-	document.getElementById("item1").innerHTML =
-	'<div id = "test1"></div>'+
-	'<div id = "test1"></div>'+
-	'<div id = "test1"></div>'+
-	'<div id = "test1"></div>'+
-	'<div id = "test1"></div>'+
-	'<p><input type="submit" value="次へ" onClick="onClickButton()"></p>';
-
-	$('#item2').animate({
-	    'marginLeft': '100%'
-	},500,function(){});
-}
-
-
-function but(){
-	$('#item2').animate({
-	    'marginLeft': '0%'
-	});
-}
 
 var up_timer;
 
@@ -60,12 +40,21 @@ function imageClick(imageNumber){
     if(imageNumber == 1){//人を選択した場合
 
         document.getElementById("Question").innerHTML =
-				'<div id = "test1"></div>'+
-				'<div id = "test1"></div>'+
-				'<div id = "test1"></div>'+
-				'<div id = "test1"></div>'+
-				'<div id = "test1"></div>'+
+        '<label for="1"><input type="radio" name="choice" value="hito1"  checked="checked"/>'  +
+        ' 子供がまちの中の身近で小さな自然や人と交流し、心身を鍛えることのできる住環境</br></label>' +
+        '<label for="2"><input type="radio" name="choice" value="hito2" />' +
+        ' 向こう三軒両隣のコミュニティのある住環境</br></label>' +
+        '<label for="3"><input type="radio" name="choice" value="hito3" />' +
+        ' 地域の緑のオアシスとなりコミュニティの活動拠点となる開かれた住宅団地</br></label>'　+
+        '<label for="4"><input type="radio" name="choice" value="hito4" />' +
+        ' 集まって住むことの楽しさと車利用の利便性を実感できる住環境</br></label>' +
+        '<label for="5"><input type="radio" name="choice" value="hito5" />' +
+        ' さまざまな人々が住み、働き、憩う、出会いと交流のあるまちの形成</br></label>'　+
         '<p><input type="submit" value="次へ" onClick="onClickButton()"></p>';
+;
+
+
+
     }
     else if(imageNumber == 2){//車を選択した場合
 
@@ -199,7 +188,7 @@ function onClickButton(){
 
 
 
-  }
+  }*
   else if(buttonCounter == 1){//２回目の書き換え//
 	   document.getElementById("Question").innerHTML =
 	    "<p>2回目の書き換え</p>";

@@ -11,7 +11,7 @@ html, body {
 }
 
 #header{
-  margin:120px 0;
+  margin:120px 0 0;
 }
 
 #header h1{
@@ -20,19 +20,20 @@ html, body {
     margin-left: 100px ;
     margin-right: 100px ;
     margin-top: 150px;
+    margin-bottom: 15px;
     padding: 0;
 		line-height: 1.5;
 }
 
 #header p{
     margin:0;
-    padding: 100px 100px 15px;
+    padding: 100px 50px 15px;
 }
 
 
 
 #Question{
-  margin: 200px auto;
+  margin: 50px auto 100px;
 }
 
 #Question form{
@@ -106,7 +107,6 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item h3{
   width: calc(100% / 3);
@@ -136,7 +136,6 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
@@ -166,7 +165,6 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);
