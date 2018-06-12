@@ -9,6 +9,15 @@ html, body {
 		line-height: 2;
     text-align:center;
 }
+
+body {
+    background-image: url("./images/background2.jpg");
+    background-size: cover ;
+    background-attachment: fixed;
+    background-position: center center;
+    text-align:center;
+    margin: auto;
+  }
 #header{
   margin:120px 0;
 }
@@ -24,68 +33,49 @@ html, body {
 
 #header p{
     margin:0;
-    padding: 80px 100px;
+    padding: 80px 100px 50px;
 }
-#column1{/*立地適正化計画とは？*/
-  margin:0;
-  padding: 80px 100px;
+
+#category{
+  margin: 300px 0 0 0;
+  padding: 100px;
   background-color: #ffffff;
 }
 
-#column1 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
+#category h2{
+    margin: 100px;
+    padding: 0 100px 30px 100px;
 }
 
-#column1 p{
-    margin: 0;
-    padding: 30px 100px 80px 100px;
-}
 
 #Question {
-	width:  36em;
-  height: 6em;
+	width:   100%;
+	min-width: 640px;
 	margin:  auto;
-  margin-top: 20px;
-  position: relative;
-  overflow: hidden;
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -o-box;
+	display: -ms-box;
+	box-pack: justify;
+	-moz-box-pack: justify;
+	-webkit-box-pack: justify;
+	-o-box-pack: justify;
+	-ms-box-pack: justify;
+}
+.radio_image {
+	width: 10%;
+	height: 10%;
+  padding: 45px;
+	display: inline-block;
 }
 
-.item{
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  position: absolute;
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
-  flex-wrap: wrap;
+#Question label {
+    /*padding-top: 100px ;*/
+    padding:  0 auto;
+    line-height: 450%;
+    /*background-color: rgba(0,0,0,0.5);*/
 }
-
-.button{
-  width: 5em;
-  height: 5em;
-  background-color: #346128;
-  border-radius: 10px;
-}
-
-@media screen and (max-width: 600px){
-  #Question {
-  	width:  18em;
-    height: 12em;
-  }
-  .item{
-    justify-content: center;
-  }
-}
-
-#map {
-  margin: auto;
-  width: 80%;
-  height: calc(70vmin);
-
-}
-
 #column2{
   margin:0;
   padding: 80px 100px;
@@ -100,6 +90,7 @@ html, body {
 
 
 #column2 h2{
+  margin : 50px;
 }
 
 
@@ -108,12 +99,9 @@ html, body {
 }
 
 #column2 p{
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 40px;
-    width: 35%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 80px auto ;
+    padding: 5px auto 40px auto;
+    width: 50%;
 }
 #footer{
   margin: 0;
@@ -136,7 +124,6 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item h3{
   width: calc(100% / 3);
@@ -166,7 +153,6 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
@@ -196,7 +182,6 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);
