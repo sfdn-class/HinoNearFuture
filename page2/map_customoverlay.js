@@ -64,9 +64,27 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
           panes.overlayLayer.appendChild(div);
 
           //svg読み込み
+          window.blocksArray = new Array();
           window.svgctrl = $("#customsvg")
           window.svgctrl.load("images/map_masterplan.svg svg", function(){
-          window.st2 = window.svgctrl.find(".st2");
+            window.blocksArray.push(window.svgctrl.find("#blocks001"));
+            window.blocksArray.push(window.svgctrl.find("#blocks002"));
+            window.blocksArray.push(window.svgctrl.find("#blocks003"));
+            window.blocksArray.push(window.svgctrl.find("#blocks004"));
+            window.blocksArray.push(window.svgctrl.find("#blocks005"));
+            window.blocksArray.push(window.svgctrl.find("#blocks006"));
+            window.blocksArray.push(window.svgctrl.find("#blocks007"));
+            window.blocksArray.push(window.svgctrl.find("#blocks008"));
+            window.blocksArray.push(window.svgctrl.find("#blocks009"));
+            window.blocksArray.push(window.svgctrl.find("#blocks010"));
+            window.blocksArray.push(window.svgctrl.find("#blocks011"));
+            window.blocksArray.push(window.svgctrl.find("#blocks012"));
+            window.blocksArray.push(window.svgctrl.find("#blocks013"));
+            window.blocksArray.push(window.svgctrl.find("#blocks016"));
+            window.blocksArray.push(window.svgctrl.find("#blocks017"));
+              window.blocksArray.forEach((val, index, array) => {
+                val.css('opacity', '0.8');
+              });
           });
     };
 
@@ -103,11 +121,47 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
 
 
+let opcValOpen = 0.0;
+let opcValClose = 0.8;
+let cssVal = 0;
 
+let valueAnimationOpen = function(num){
+  opcValOpen = 0.0;
+  opcValClose = 0.8;
+    let id = setInterval(function(){
+        opcValOpen += 0.1;
+        opcValClose -= 0.1;
 
-function but(){
-  window.st2.css('opacity', '0.0');
+        for (let i = 0; i < window.blocksArray.length; i++) {
+          if (i != num && window.blocksArray[i].css('opacity') > 0.0) {
+            window.blocksArray[i].css('opacity', opcValClose);
+          }
+        }
+
+        if (window.blocksArray[num].css('opacity') < 0.8) {
+          window.blocksArray[num].css('opacity', opcValOpen);
+        }
+
+        if (opcValOpen > 0.8 && opcValClose < 0.0) {
+          clearInterval(id);
+        }
+    },30);
 }
-function but2(){
-  window.st2.css('opacity', '1.0');
-}
+
+function a1(){valueAnimationOpen(3);}
+function a2(){valueAnimationOpen(4);}
+function a3(){valueAnimationOpen(6);}
+function a4(){valueAnimationOpen(9);}
+
+function b1(){valueAnimationOpen(10);}
+function b2(){valueAnimationOpen(11);}
+function b3(){valueAnimationOpen(5);}
+
+function c1(){valueAnimationOpen(0);}
+function c2(){valueAnimationOpen(1);}
+
+function d1(){valueAnimationOpen(2);}
+
+function e1(){valueAnimationOpen(7);}
+function e2(){valueAnimationOpen(8);}
+function e3(){valueAnimationOpen(14);}
