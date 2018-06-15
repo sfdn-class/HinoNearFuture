@@ -38,12 +38,12 @@ body {
 
 #category{
   margin: 300px 0 0 0;
-  padding: 100px;
+  padding-top: 100px;
+
   background-color: #ffffff;
 }
 
 #category h2{
-    margin: 100px;
     padding: 0 100px 30px 100px;
 }
 
@@ -115,7 +115,23 @@ body {
   padding: 5px;
 }
 
+#map {
+  margin: auto;
+  width: 80%;
+  height: calc(70vmin);
+}
 
+#infomation{
+  margin: auto;
+  width: 80%;
+  background-color: #ffffff;
+  display:none;
+}
+
+#infomation h2{
+  margin:0;
+  padding: 0;
+}
 
 @media screen and (max-width: 768px){
   #Question {
@@ -132,22 +148,16 @@ body {
   }
 }
 
-#map {
-  margin: auto;
-  width: 80%;
-  height: calc(70vmin);
 
-}
+
+
 
 #column2{
   margin:0;
-  padding: 80px 100px;
-  background-color: #ffffff;
-}
-
-#column2{
-  margin:0;
-  padding: 190px 100px 150px;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 150px;
   background-color: #ffffff;
 }
 

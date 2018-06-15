@@ -2,7 +2,7 @@
 
 let buttonCounter = 0;
 
-
+//カテゴリ選択　ここから
 function hitoClick(){
 	$('#item2').animate({'height': 'hide'},200,function(){});
 
@@ -116,9 +116,6 @@ function sonotaClick(){
 	},200);
 }
 
-
-
-
 function back(){
 	$('#item1').animate({'height': 'hide'},200,function(){});
 
@@ -131,8 +128,9 @@ function back(){
 			$('#item2').animate({'height': 'show'},200,function(){});
 	},200);
 }
+//カテゴリ選択　ここまで
 
-
+//レスポンシブ
 $(window).on('load resize', function() {
   if (window.innerWidth < 768) {
     $('.item').css('grid-template-columns', '1fr 1fr 1fr');
@@ -179,3 +177,75 @@ function scrollup(){
 	getPosition();
 	pageup(horizontal,vertical);
 }
+
+
+let rewriteInfo = function(text){
+	$('#infomation').animate({'width': 'hide'},200,function(){});
+	$('#infomation').animate({'width': 'show'},200,function(){});
+	setTimeout(function(){
+		$("#infomation").html(text);
+	},200);
+}
+//#infomation 書き換え　ここから
+//バッククオーテーション``は消さないこと！
+function a1(){
+	rewriteInfo(`
+		<h2>昔ながらの里山風景が残る住環境</h2>
+		 <p>
+			 里山風景が残るこの地区は、多摩丘陵の東端に位置し、
+		起伏に富んだ谷戸地形を形成しています。そして、丘陵地
+		の樹林と湧水に育まれた多様な生物が生息しています。</br></br>
+		　また、雑木林やリンゴの里、養鶏場などの都市農業がこ
+		の地域を特徴付けており、まとまりのある集落が良好な田
+		園景観を形成しています。
+		</p>
+		<img src="./images/mukasinagarano.png" alt="写真">
+		<p>
+		　このように谷戸景観や田園景観が残されている地区にお
+		いては、住宅一戸の建築であっても自然の地形を活かし、
+		自然環境や景観に配慮した住宅となるように誘導していき
+		ます。</br></br>
+		　そこで、まちづくりにおいても谷戸特有である自然環境
+		や集落環境を保全するとともに、これらと共存する低層住
+		宅地を形成していきます。
+		 </p>
+	`);
+}
+function a2(){
+			rewriteInfo(`
+			  <h2>多様な生き物とともに暮らしていける住環境</h2>
+			<p>
+			  多様な生き物が身近に生息するこの地区は、周辺の多摩
+			川や日野用水などの水辺、日野緑地の崖線の緑や湧水が身
+			近にある自然環境が豊かに残されています。</br></br>
+			　自然環境を身近に感じ、四季の移ろいを肌で感じられる
+			環境は、市街化が進む中では希少になりつつあります。
+			</p>
+			  <img src="./images/tayounaikimono.png" alt="写真">
+			<p>
+			　しかし、まちづくりにおいてこれらの貴重な自然環境を
+			しっかりと守り、育んでいくことで、いつまでもこの環境
+			の中で生活していくことが可能となります。</br></br>
+			 そこで、都市基盤の改善や住環境の向上などまちづくり
+			を進めるなかで、自然環境を保全するとともに、これらと
+			共存する低層住宅地を形成していきます。
+			</p>
+			`);
+}
+function a3(){rewriteInfo(``);}
+function a4(){rewriteInfo(``);}
+
+function b1(){rewriteInfo(``);}
+function b2(){rewriteInfo(``);}
+function b3(){rewriteInfo(``);}
+
+function c1(){rewriteInfo(``);}
+function c2(){rewriteInfo(``);}
+
+function d1(){rewriteInfo(``);}
+
+function e1(){rewriteInfo(``);}
+function e2(){rewriteInfo(``);}
+function e3(){rewriteInfo(``);}
+
+//#infomation 書き換え　ここまで
