@@ -9,6 +9,15 @@ html, body {
 		line-height: 2;
     text-align:center;
 }
+
+body {
+    background-image: url("./images/background2.jpg");
+    background-size: cover ;
+    background-attachment: fixed;
+    background-position: center center;
+    text-align:center;
+    margin: auto;
+  }
 #header{
   margin:120px 0;
 }
@@ -24,72 +33,146 @@ html, body {
 
 #header p{
     margin:0;
-    padding: 80px 100px;
+    padding: 80px 100px 50px;
 }
-#column1{/*立地適正化計画とは？*/
-  margin:0;
-  padding: 80px 100px;
+
+#category{
+  margin: 300px 0 0 0;
+  padding: 100px;
   background-color: #ffffff;
 }
 
-#column1 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
+#category h2{
+    margin: 100px;
+    padding: 0 100px 30px 100px;
 }
 
-#column1 p{
-    margin: 0;
-    padding: 30px 100px 80px 100px;
-}
 
 #Question {
-	width:   100%;
-	min-width: 640px;
+	width:  48em;
+  height: 4.1em;
 	margin:  auto;
-	display: box;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -o-box;
-	display: -ms-box;
-	box-pack: justify;
-	-moz-box-pack: justify;
-	-webkit-box-pack: justify;
-	-o-box-pack: justify;
-	-ms-box-pack: justify;
-}
-.radio_image {
-	width: 10%;
-	height: 10%;
-  padding: 45px;
-	display: inline-block;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
-#Question label {
-    /*padding-top: 100px ;*/
-    padding:  0 auto;
-    line-height: 450%;
-    /*background-color: rgba(0,0,0,0.5);*/
+
+#item1{
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
 }
+
+#item2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.item{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content:space-around;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+
+#category1{
+  border-radius: 5px;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+
+.button{
+  background-color: #1d7ad0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button:hover{
+  background-color: #7abcf7;
+}
+
+.button2{
+  background-color: #1dd0a0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.button2:hover{
+  background-color: #71e7c8;
+}
+
+.butText2{
+  line-height: 1;
+  margin: auto;
+  padding: 5px;
+}
+
+
+
+@media screen and (max-width: 768px){
+  #Question {
+  	width:  90%;
+    height: 8.3em;
+  }
+  .item{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+  #map{
+    height:80%;
+  }
+}
+
+#map {
+  margin: auto;
+  width: 80%;
+  height: calc(70vmin);
+
+}
+
 #column2{
   margin:0;
   padding: 80px 100px;
   background-color: #ffffff;
 }
 
+#column2{
+  margin:0;
+  padding: 190px 100px 150px;
+  background-color: #ffffff;
+}
+
+
 #column2 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
+  margin : 50px;
+}
+
+
+#column2 img{
+  width: 60%;
 }
 
 #column2 p{
-    margin: 0;
-    padding: 30px 100px 80px 100px;
+    margin: 80px auto ;
+    padding: 5px auto 40px auto;
+    width: 50%;
 }
 #footer{
   margin: 0;
-  padding: 10px  0;
+  padding: 10px  0 0 0;
     background: #ffffff;
     position: relative;
+    color: white;
+
 }
 #footer .nav {
  display: flex;
@@ -104,23 +187,23 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-  left: 0;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-  left: 0;
-margin:0;
-padding:0;
+  top: 43%;
+  margin:0;
+  padding:0;
+  line-height: 2.3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item img{
     width: 100%;
@@ -133,21 +216,23 @@ padding:0;
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item2 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -160,21 +245,23 @@ padding:0;
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item3 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item3 img{
     width: 100%;

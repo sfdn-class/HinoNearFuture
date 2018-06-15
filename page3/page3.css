@@ -11,7 +11,7 @@ html, body {
 }
 
 #header{
-  margin:120px 0;
+  margin:120px 0 0;
 }
 
 #header h1{
@@ -20,19 +20,20 @@ html, body {
     margin-left: 100px ;
     margin-right: 100px ;
     margin-top: 150px;
+    margin-bottom: 15px;
     padding: 0;
 		line-height: 1.5;
 }
 
 #header p{
     margin:0;
-    padding: 80px 100px;
+    padding: 100px 50px 15px;
 }
 
 
 
 #Question{
-  margin: 250px auto;
+  margin: 50px auto 100px;
 }
 
 #Question form{
@@ -63,7 +64,7 @@ html, body {
    font : 1em sans-serif;
    width : 60%;
    box-sizing: border-box;
-   border: 1px solid #999;
+   border: 2px solid #999;
    border-radius : 0.5em;
 }
 
@@ -74,7 +75,7 @@ html, body {
 
 #Question textarea{
   vertical-align: top;
-  height: 15em;
+  height: 18em;
 }
 
 #Question .button{
@@ -87,9 +88,11 @@ html, body {
 
 #footer{
   margin: 0;
-  padding: 10px  0;
+  padding: 10px  0 0 0;
     background: #ffffff;
     position: relative;
+    color: white;
+
 }
 #footer .nav {
  display: flex;
@@ -104,23 +107,23 @@ html, body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-  left: 0;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-  left: 0;
-margin:0;
-padding:0;
+  top: 43%;
+  margin:0;
+  padding:0;
+  line-height: 2.3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item img{
     width: 100%;
@@ -133,21 +136,23 @@ padding:0;
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item2 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -160,21 +165,23 @@ padding:0;
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item3 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item3 img{
     width: 100%;

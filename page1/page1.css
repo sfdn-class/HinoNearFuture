@@ -6,10 +6,10 @@ html, body {
     margin-right: auto;
     margin-left: auto;
     font-family: serif;
-    line-height: 2;
+    line-height: 2.5;
 }
 body {
-    background-image: url("./images/background.jpeg");
+    background-image: url("./images/background.jpg");
     background-size: cover ;
     background-attachment: fixed;
     background-position: center center;
@@ -19,16 +19,17 @@ body {
 
 #header{
   margin:120px 0;
+  color: white;
 }
 
 #header h1{
-    /*background-color: rgb(255,255,255);*/
     max-width: 100%;
     margin-left: 100px ;
     margin-right: 100px ;
     margin-top: 150px;
     padding: 0;
     line-height: 1.5;
+    text-align:center;
 }
 
 #header p{
@@ -38,23 +39,27 @@ body {
 
 #column1{/*立地適正化計画とは？*/
   margin:0;
-  padding: 80px 100px;
+  padding: 150px 100px;
   background-color: #ffffff;
-}
-
-#column1 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
+  text-align:center;
 }
 
 #column1 p{
+
     margin: 0;
-    padding: 30px 100px 80px 100px;
+    padding-top: 30px
+    padding-bottom: 40px;
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #photos2{
   background-color: #ffffff;
+  margin : 0;
+  padding : 0;
 }
+
 #photos2 img {
     border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
     width: 700px;       /* ※縦横を同値に */
@@ -63,34 +68,42 @@ body {
 
 #column2{
   margin:0;
-  padding: 80px 100px;
+  padding: 190px 100px 150px;
   background-color: #ffffff;
 }
 
-#column2 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
-}
 
 #column2 p{
     margin: 0;
-    padding: 30px 100px 80px 100px;
+    padding-top: 0;
+    padding-bottom: 40px;
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#photos3{
+  background-color: #ffffff;
+  margin : 0 ;
+  padding : 0 150px;
+}
+#photos3 img{
+  width : 65%;
 }
 
 #column3{
   margin:0;
-  padding: 80px 100px 200px;
+  padding: 190px 100px 190px 100px;
   background-color: #ffffff;
-}
-
-#column3 h2{
-    margin: 0;
-    padding: 120px 100px 70px 100px;
 }
 
 #column3 p{
     margin: 0;
-    padding: 30px 100px 80px 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -99,6 +112,8 @@ body {
   padding: 10px  0 0 0;
     background: #ffffff;
     position: relative;
+    color: white;
+
 }
 #footer .nav {
  display: flex;
@@ -113,23 +128,23 @@ body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-  left: 0;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-  left: 0;
-margin:0;
-line-height: 1.5;
+  top: 43%;
+  margin:0;
+  padding:0;
+  line-height: 2.3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item img{
     width: 100%;
@@ -142,22 +157,23 @@ line-height: 1.5;
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item2 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item2 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
-line-height: 1.5;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -170,22 +186,23 @@ line-height: 1.5;
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #CCC;
 }
 #footer .nav .page__item3 h3{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top:17%;
-margin:0;
-padding:0;
+  top:23%;
+  margin:0;
+  padding:0;
+  letter-spacing: 3px;
 }
 #footer .nav .page__item3 p{
   width: calc(100% / 3);
   position: absolute;/*絶対配置*/
-  top: 35%;
-margin:0;
-padding:0;
-line-height: 1.5;
+  top: 44%;
+  margin:0;
+  padding:0;
+  line-height: 3;
+  letter-spacing: 1px;
 }
 #footer .nav .page__item3 img{
     width: 100%;
