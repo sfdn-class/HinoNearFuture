@@ -42,7 +42,7 @@ body {
   margin:0;
   padding: 150px 100px;
   background-color: #ffffff;
-  text-align:center;
+  text-align:left;
 }
 
 #column1 p{
@@ -71,6 +71,7 @@ body {
   margin:0;
   padding: 190px 100px 150px;
   background-color: #ffffff;
+  text-align: left;
 }
 
 
@@ -96,6 +97,7 @@ body {
   margin:0;
   padding: 190px 100px 190px 100px;
   background-color: #ffffff;
+  text-align: left;
 }
 
 #column3 p{
@@ -111,10 +113,9 @@ body {
 #footer{
   margin: 0;
   padding: 10px  0 0 0;
-    background: #ffffff;
-    position: relative;
-    color: white;
-
+  background: #ffffff;
+  position: relative;
+  color: white;
 }
 #footer .nav {
  display: flex;
@@ -130,23 +131,6 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-#footer .nav .page__item h3{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top:23%;
-  margin:0;
-  padding:0;
-  letter-spacing: 3px;
-}
-#footer .nav .page__item p{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top: 43%;
-  margin:0;
-  padding:0;
-  line-height: 2.3;
-  letter-spacing: 1px;
-}
 #footer .nav .page__item img{
     width: 100%;
 }
@@ -158,23 +142,6 @@ body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-}
-#footer .nav .page__item2 h3{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top:23%;
-  margin:0;
-  padding:0;
-  letter-spacing: 3px;
-}
-#footer .nav .page__item2 p{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top: 44%;
-  margin:0;
-  padding:0;
-  line-height: 3;
-  letter-spacing: 1px;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -188,23 +155,7 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-#footer .nav .page__item3 h3{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top:23%;
-  margin:0;
-  padding:0;
-  letter-spacing: 3px;
-}
-#footer .nav .page__item3 p{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top: 44%;
-  margin:0;
-  padding:0;
-  line-height: 3;
-  letter-spacing: 1px;
-}
+
 #footer .nav .page__item3 img{
     width: 100%;
 }
