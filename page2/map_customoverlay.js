@@ -21,11 +21,43 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
     window.myMap = new google.maps.Map(document.getElementById('map'), mapElement);
   // コンストラクタが実行されると表示される
 
+  //マーカー表示用パラメータ格納
+  function markerzahyo(_lat, _lng, _html){
+    this.lat = _lat;
+    this.lng = _lng;
+    this.html = _html;
+  };
+  const zahyo = new Array();
+  zahyo[0] = new markerzahyo(35.649553, 139.402685,'<p>多摩動物公園</p>');
+  zahyo[1] = new markerzahyo(35.662392, 139.410074,'<p>高幡不動尊金剛寺</p>');
+  zahyo[2] = new markerzahyo(35.649082, 139.405145,'<p>京王れーるランド</p>');
+  zahyo[3] = new markerzahyo(35.654033, 139.427906,'<p>京王百草園</p>');
+
+  const markerElement = [];
+  const InfoWindowElement = [];
+  window.markerArray = new Array();
+  window.infoWindowArray = new Array();
+
+  for (let i = 0; i < zahyo.length; i++) {
+      markerElement[i] = {position: {lat:zahyo[i].lat, lng:zahyo[i].lng}};
+      InfoWindowElement[i] = {content:zahyo[i].html};
+
+      window.markerArray.push(new google.maps.Marker(markerElement[i]));
+      window.infoWindowArray.push(new google.maps.InfoWindow(InfoWindowElement[i]));
+
+      window.markerArray[i].addListener('click', ()=> { //関数オブジェクトを記述開始
+          window.infoWindowArray.forEach((val,index,array) => {
+            val.close();
+          });
+        //マーカオブジェクトがクリックされた時に，この関数が呼ばれる
+          window.infoWindowArray[i].open(myMap, window.markerArray[i]);
+        }//関数オブジェクト記述ここまで
+      );
+  }
+  //マーカー関係ここまで
 
     //let overlay;
     USGSOverlay.prototype = new google.maps.OverlayView();
-
-
 
     window.overlay = new USGSOverlay(bounds,window.myMap);
 
@@ -169,38 +201,9 @@ function e2(){valueAnimationOpen(8);}
 function e3(){valueAnimationOpen(14);}
 
 
-/*
+
 function kankouClick(){
 //	  alert("クリックされました");
-
-	    // 多摩動物公園
-	    const firstMarkerElement = {
-	      position: {lat:35.649553, lng:139.402685},
-	      map: myMap
-	    };
-	    const firstMarker =
-	      new google.maps.Marker(firstMarkerElement);
-	    //高幡不動尊金剛寺
-	    const secondMarkerElement = {
-	      position: {lat:35.662392, lng:139.410074},
-	      map: myMap
-	    };
-	    const secondMarker =
-	      new google.maps.Marker(secondMarkerElement);
-	    //京王れーるランド
-	    const thirdMarkerElement = {
-	      position: {lat:35.649082, lng:139.405145},
-	      map: myMap
-	    };
-	    const thirdMarker =
-	      new google.maps.Marker(thirdMarkerElement);
-	    //京王百草園
-	    const forthMarkerElement = {
-	      position: {lat:35.654033, lng:139.427906},
-	      map: myMap
-	    };
-	    const forthMarker =
-	      new google.maps.Marker(forthMarkerElement);
-	}
-
-}*/
+window.infoWindowArray.forEach((val,index,array) => {val.close();});
+window.markerArray.forEach((val,index,array) => {val.setMap(window.myMap);val.setAnimation(google.maps.Animation.DROP);});
+}
