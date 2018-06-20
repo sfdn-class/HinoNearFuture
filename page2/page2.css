@@ -122,16 +122,11 @@ body {
 }
 
 #infomation{
-  margin: auto;
-  width: 80%;
   background-color: #ffffff;
   display:none;
 }
 
-#infomation h2{
-  margin:0;
-  padding: 0;
-}
+
 
 @media screen and (max-width: 768px){
   #Question {
@@ -151,7 +146,6 @@ body {
 
 
 
-
 #column2{
   margin:0;
   padding-top: 50px;
@@ -163,18 +157,32 @@ body {
 
 
 #column2 h2{
-  margin : 50px;
+  margin : 50px auto;
+  padding: 0 auto 40px auto;
+  width: 60%;
+}
+
+#column2 h3{
+  margin: 100px auto 5px;
+  padding: 5px auto 0 auto;
+  width: 50%;
+  font-size: 25px;
+  text-align: left;
 }
 
 
 #column2 img{
+  margin: 10px auto;
+  padding: 0 auto;
   width: 60%;
+  text-align: center;
 }
 
 #column2 p{
-    margin: 80px auto ;
-    padding: 5px auto 40px auto;
+    margin: 20px auto ;
+    padding: 0 auto 40px auto;
     width: 50%;
+    text-align: left;
 }
 
 
@@ -199,7 +207,7 @@ body {
 
 #column3  h3{
   padding: 30px 0px 20px 80px;
-  text-align: center;
+  text-align: left;
 }
 
 #column3 .saito img{
@@ -209,34 +217,41 @@ body {
 
 #column3 .saito p{
     padding: 30px 0px 50px 90px;
-    text-align: center;
+    text-align: left;
 }
 
 #column4{
   margin:0;
-  padding: 100px;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 150px;
   background-color: #ffffff;
 }
 
-#column4 h2{
-  margin : 50px;
+
+#column4 h3{
+  margin: 80px auto 0;
+  padding: 5px auto 0 auto;
+  width: 50%;
+  font-size: 25px;
+  text-align: left;
 }
 
-
 #column4 p{
-    margin: 80px auto ;
-    padding: 5px auto 40px auto;
+    margin: 10px auto ;
+    padding: 0 auto 40px auto;
     width: 50%;
+    text-align: left;
 }
 
 
 #footer{
   margin: 0;
   padding: 10px  0 0 0;
-    background: #ffffff;
-    position: relative;
-    color: white;
-
+  background: #ffffff;
+  position: relative;
+  color: white;
 }
 #footer .nav {
  display: flex;
@@ -252,23 +267,6 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-#footer .nav .page__item h3{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top:23%;
-  margin:0;
-  padding:0;
-  letter-spacing: 3px;
-}
-#footer .nav .page__item p{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top: 43%;
-  margin:0;
-  padding:0;
-  line-height: 2.3;
-  letter-spacing: 1px;
-}
 #footer .nav .page__item img{
     width: 100%;
 }
@@ -280,23 +278,6 @@ body {
   background: #ffffff;
   text-align: center;
   vertical-align: middle;
-}
-#footer .nav .page__item2 h3{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top:23%;
-  margin:0;
-  padding:0;
-  letter-spacing: 3px;
-}
-#footer .nav .page__item2 p{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top: 44%;
-  margin:0;
-  padding:0;
-  line-height: 3;
-  letter-spacing: 1px;
 }
 #footer .nav .page__item2 img{
     width: 100%;
@@ -310,23 +291,7 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-#footer .nav .page__item3 h3{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top:23%;
-  margin:0;
-  padding:0;
-  letter-spacing: 3px;
-}
-#footer .nav .page__item3 p{
-  width: calc(100% / 3);
-  position: absolute;/*絶対配置*/
-  top: 44%;
-  margin:0;
-  padding:0;
-  line-height: 3;
-  letter-spacing: 1px;
-}
+
 #footer .nav .page__item3 img{
     width: 100%;
 }
