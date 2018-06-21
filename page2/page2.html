@@ -17,96 +17,99 @@
 
 </head>
 <body>
-  　<div id="header">
-  <h1>
-    　<font size="41" >将来の日野市を実際に想像してみる</br></font></h1>
-    <p>
-未来の日野市の成長と変化を想像し、
-実際に住む環境や生活を</br>
-シミュレーションしてみませんか。</br></br>
-まちづくりマスタープラン実現に向けて、</br>
-現実的にシミュレーションしてみることで、</br>
-より具体的に考えてみましょう。</br>
-    </p>
-  </div><!--header-->
+    <div id="header">
+        <div id="title">
+          <h1><span class="no-wrap">将来の日野市を</span><span class="no-wrap">実際に想像してみる</span>
+          </h1><!--no-wrapで囲むことで画面のサイズが変わったときに任意の位置で改行できます。-->
+        </div>
+        <div id="title_comment">
+          <p><span class="no-wrap">未来の日野市の成長と変化を想像し、</span>
+            <span class="no-wrap">実際に住む環境や生活をシミュレーションしてみませんか。</span></P>
+          <p><span class="no-wrap">まちづくりマスタープラン実現に向けて、</span>
+             <span class="no-wrap">現実的にシミュレーションしてみることで、</span>
+             <span class="no-wrap">より具体的に考えてみましょう。</span></p>
+        </div>
+    </div><!--header-->
 
 
-<div id="category">
-  <h2>あなたが住みたい地域や、興味のある特徴を選択してみましょう。</h2>
-  <div id="map">
-  </div><!--Map-->
-    <div id="Question">
-            <div id = "item1">
-              <div id="itemButtons1" class="item"></div>
-            </div>
-            <div id="item2" id = "item2">
-              <div id="itemButtons2" class="item">
-                <a href="#a1" id="category1" class="button" onclick="hitoClick();"><p class="butText">人と暮らす</p></a>
-                <a href="#a1" id="category1" class="button" onclick="kurumaClick();"><p class="butText">自動車を使う</p></a>
-                <a href="#a1" id="category1" class="button" onclick="densyaClick();"><p class="butText">公共交通を使う</p></a>
-                <a href="#a1" id="category1" class="button" onclick="sizennClick();"><p class="butText">自然と暮らす</p></a>
-                <a href="#a1" id="category1" class="button" onclick="tiikiClick();"><p class="butText">地域内が便利</p></a>
-                <a href="#a1" id="category1" class="button" onclick="sonotaClick();"><p class="butText">その他</p></a>
-              </div>
-            </div>
-    </div>
-    <div id="choice">
-      <h3>気になる情報と照らし合わせて見てみましょう。</h3>
-        <a href="#" onclick="kankouClick();"><img src="./images/button1.png"></a><!--近くの小学校を探す-->
-        <a href="#" onclick="kankouClick();"><img src="./images/button2.png"></a><!--近くの中学校を探す-->
-        <a href="#" onclick="kankouClick();"><img src="./images/button3.png"></a><!--近くの観光地を探す-->
-        <a href="#" onclick="kankouClick();"><img src="./images/button4.png"></a><!--近くのお店を探す-->
-    </div><!--choice-->
+    <div id="category">
+      <h2><span class="no-wrap">あなたが住みたい地域や、</span>
+          <span class="no-wrap">興味のある特徴を選択してみましょう。</span>
+        </h2>
+      <div id="map">
+      </div><!--Map-->
+        <div id="Question">
+                <div id = "item1">
+                  <div id="itemButtons1" class="item"></div>
+                </div>
+                <div id="item2" id = "item2">
+                  <div id="itemButtons2" class="item">
+                    <a href="#a1" id="category1" class="button" onclick="hitoClick();"><p class="butText2">人と暮らす</p></a>
+                    <a href="#a1" id="category1" class="button" onclick="kurumaClick();"><p class="butText2">自動車を使う</p></a>
+                    <a href="#a1" id="category1" class="button" onclick="densyaClick();"><p class="butText2">公共交通を使う</p></a>
+                    <a href="#a1" id="category1" class="button" onclick="sizennClick();"><p class="butText2">自然と暮らす</p></a>
+                    <a href="#a1" id="category1" class="button" onclick="tiikiClick();"><p class="butText2">地域内が便利</p></a>
+                    <a href="#a1" id="category1" class="button" onclick="sonotaClick();"><p class="butText2">その他</p></a>
+                  </div>
+                </div>
+        </div>
+        <div id="choice">
+          <h3>気になる情報と照らし合わせて見てみましょう。</h3>
+            <a href="#" onclick="kankouClick();"><img src="./images/button1.png"></a><!--近くの小学校を探す-->
+            <a href="#" onclick="kankouClick();"><img src="./images/button2.png"></a><!--近くの中学校を探す-->
+            <a href="#" onclick="kankouClick();"><img src="./images/button3.png"></a><!--近くの観光地を探す-->
+            <a href="#" onclick="kankouClick();"><img src="./images/button4.png"></a><!--近くのお店を探す-->
+        </div><!--choice-->
 
-</div><!--category-->
-
-
-
-
-<div id="column2"><!--Mapで書き換わる内容-->
-  <div id="infomation">
-  </div>
-</div><!--column2-->
+    </div><!--category-->
 
 
-<div id="column3"><!--おすすめの住宅検索サイト-->
-  <h2>おすすめの住宅検索サイト</h2>
-  <div class="saito">
-    <img src="./images/hudousan.png" alt="写真" align="left">
-    <h3>賃貸マンション・アパート検索は　<a href="https://suumo.jp/chintai/tokyo/sc_hino/">こちら</a>　から</h3>
-    <p>
-      お部屋探しのSUUMO（スーモ）なら、日野市エリア18164件の物件をご紹介！エリア・沿線・建物の種類・人気テーマ・条件など豊富な検索機能で、日野市周辺の賃貸マンション・賃貸アパート情報をお届けし、あなたの賃貸情報探し・お家探しをサポートします。
-    </p>
-  </div><!--saito-->
-  <div class="saito">
-    <img src="./images/tintai.png" alt="写真" align="left">
-    <h3>不動産・住宅検索は　<a href="https://www.homes.co.jp/tokyo/hino-city/">こちら</a>　から</h3>
-    <p>
-      物件数No.1の不動産・住宅情報サイト、ライフルホームズ。日野市の不動産・住宅を検索、間取りや価格で絞り込み、簡単に比較・資料請求！日野市で不動産の購入・検索[物件探し]・住宅情報なら[LIFULL HOME'S/ライフルホームズ]！
-    </p>
-  </div><!--saito-->
-</div><!--column3-->
 
 
-<div id="column4"><!--まとめの内容-->
-  <h3>このマップ情報を使って、色々考えてみてね、みたいな内容。まとめ</h3>
-  <p>里山風景が残るこの地区は、多摩丘陵の東端に位置し、 起伏に富んだ谷戸地形を形成しています。そして、丘陵地 の樹林と湧水</p>
-</div><!--column4-->
+    <div id="column2"><!--Mapで書き換わる内容-->
+      <div id="infomation">
+      </div>
+    </div><!--column2-->
 
-<div id="footer"><!--別ページへのリンク-->
-  <ul class="nav">
-      <li class="page__item"><a href="../page1/page1.html">
-        <img src="./images/item1.png" alt="写真"></a>
-      </li>
-      <li class="page__item2"><a href="../page2/page2.html">
-        <img src="./images/item2.png" alt="写真"></a>
-      </li>
-      <li class="page__item3"><a href="../page3/page3.html">
-        <img src="./images/item3.png" alt="写真"></a>
-      </li>
-  </ul>
-  <a onclick="scrollup(); return false;" href="#container">ページの先頭へ</a>
-</div><!--footer-->
+
+    <div id="column3"><!--おすすめの住宅検索サイト-->
+      <h2>おすすめの住宅検索サイト</h2>
+      <div class="saito">
+        <img src="./images/hudousan.png" alt="写真" align="left">
+        <h3>賃貸マンション・アパート検索は　<a href="https://suumo.jp/chintai/tokyo/sc_hino/">こちら</a>　から</h3>
+        <p>
+          お部屋探しのSUUMO（スーモ）なら、日野市エリア18164件の物件をご紹介！エリア・沿線・建物の種類・人気テーマ・条件など豊富な検索機能で、日野市周辺の賃貸マンション・賃貸アパート情報をお届けし、あなたの賃貸情報探し・お家探しをサポートします。
+        </p>
+      </div><!--saito-->
+      <div class="saito">
+        <img src="./images/tintai.png" alt="写真" align="left">
+        <h3>不動産・住宅検索は　<a href="https://www.homes.co.jp/tokyo/hino-city/">こちら</a>　から</h3>
+        <p>
+          物件数No.1の不動産・住宅情報サイト、ライフルホームズ。日野市の不動産・住宅を検索、間取りや価格で絞り込み、簡単に比較・資料請求！日野市で不動産の購入・検索[物件探し]・住宅情報なら[LIFULL HOME'S/ライフルホームズ]！
+        </p>
+      </div><!--saito-->
+    </div><!--column3-->
+
+
+    <div id="column4"><!--まとめの内容-->
+      <h3>このマップ情報を使って、色々考えてみてね、みたいな内容。まとめ</h3>
+      <p>里山風景が残るこの地区は、多摩丘陵の東端に位置し、 起伏に富んだ谷戸地形を形成しています。そして、丘陵地 の樹林と湧水</p>
+    </div><!--column4-->
+
+    <div id="footer"><!--別ページへのリンク-->
+      <ul class="nav">
+          <li class="page__item"><a href="../page1/page1.html">
+            <img src="./images/item1.png" alt="写真"></a>
+          </li>
+          <li class="page__item2"><a href="../page2/page2.html">
+            <img src="./images/item2.png" alt="写真"></a>
+          </li>
+          <li class="page__item3"><a href="../page3/page3.html">
+            <img src="./images/item3.png" alt="写真"></a>
+          </li>
+      </ul>
+      <a onclick="scrollup(); return false;" href="#container">ページの先頭へ</a>
+    </div><!--footer-->
 
 </body>
 </html>
