@@ -342,6 +342,10 @@ height: 100%;
     height: 60vh;
   }
 
+  #infomation{
+    width: 90%;
+  }
+
   #column2{
   }
 
@@ -363,8 +367,7 @@ height: 100%;
 
 
   #column2 p{
-      margin: 20px auto ;
-      padding: 0 auto 40px auto;
+      margin: auto ;
       width: 100%;
       text-align: left;
   }
