@@ -279,7 +279,42 @@ function c2(){rewriteInfo(``);}
 
 function d1(){rewriteInfo(``);}
 
-function e1(){rewriteInfo(``);}
+function e1(){
+	rewriteInfo(`
+
+			<h2>
+				<span class="no-wrap">「周辺の営農環境に配慮した まち並みの整った住環境」</span>
+				<span class="no-wrap">についてのご紹介</span>
+			</h2>
+
+				<img src="./images/mukasinagarano.png" alt="写真">
+				<div class = "column2_content">
+					<h3>目的</h3>
+							 <p>
+　まちづくりにおいては、居住者の利便性や快適性の向上は大きな目的のひとつであり、基盤整備はその基本となるものです。また、幹線道路の整備も地区の利便性の向上には欠かせないものです。</p>
+				</div>
+				<div class = "column2_content">
+					<h3>問題と課題</h3>
+							<p>
+　都市基盤や幹線道路が整備されると、地区の様相かは一変し、それまで農地が広大な広がりを見せていた地区が市街化され、住宅地が形成されていきます。
+しかし、こうした状況にあっても地区内に残された農地は農業基本条例の精神に従って保全、育成していくことが必要となります。
+							</p>
+				</div>
+							<div id = "g_street_view">
+							<iframe src="https://www.google.com/maps/embed?pb=!4v1529558946017!6m8!1m7!1sZWzAB8jS8rAX-eMyhCkJgg!2m2!1d35.66102958996036!2d139.3681677131816!3f318.93204722983324!4f9.674716852543298!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+				<div class = "column2_content">
+					<h3>解決策</h3>
+							<p>
+　基盤整備や幹線道路の整備などを含めた、住宅市街地等の整備の際に、残された農地の営農環境を著しく悪化させないように配慮していきます。</p>
+				</div>
+				<div class = "column2_content">
+						 <h3>具体的対策</h3>
+								 <p>
+　東西軸の幹線道路沿道北側について、後背部の農地への日照等、良好な営農環境保全の観点から、南側に比して建物高さを押さえるなど、柔軟で、きめ細かな都市計画を行い、営農環境と調和し、交通利便性に優れた、街並みの整った住環境の形成を図ります。</p>
+
+				</div>
+		`);}
 function e2(){rewriteInfo(``);}
 function e3(){rewriteInfo(``);}
 

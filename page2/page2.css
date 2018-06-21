@@ -78,8 +78,8 @@ body {
 }
 
 #choice img{
-  width:30%;
-  margin:15px 55px;
+  width:25%;
+  margin:15px 60px;
 }
 
 #choice h3{
@@ -169,17 +169,19 @@ body {
 
 #column2 h2{
   margin : auto;
-
+  padding:40px 10px 10px 10px;
 }
 
 .column2_content{
     margin:2em auto auto auto;
+    padding: 20px;
 }
 
 #column2 h3{
   margin: auto;
   font-size: 1.5em;
-  text-align: left;;
+  text-align: left;
+  padding: 10px 10px 0px 10px;
 }
 
 
@@ -192,6 +194,7 @@ body {
 #column2 p{
   margin: auto;
   text-align: left;
+  padding: 10px;
 }
 
 #g_street_view{
