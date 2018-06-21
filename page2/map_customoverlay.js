@@ -21,6 +21,14 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
     window.myMap = new google.maps.Map(document.getElementById('map'), mapElement);
   // コンストラクタが実行されると表示される
 
+/*
+**MarkerElement(){
+  marker.setMap(null);
+};
+**Marker(){
+  window.**Marker
+};
+*/
 
     //let overlay;
     USGSOverlay.prototype = new google.maps.OverlayView();
@@ -168,6 +176,11 @@ function e1(){valueAnimationOpen(7);}
 function e2(){valueAnimationOpen(8);}
 function e3(){valueAnimationOpen(14);}
 
+/*function syougakouClick(){
+}*/
+
+/*function tyugakouClick(){
+}*/
 
 /*
 function kankouClick(){
@@ -201,6 +214,54 @@ function kankouClick(){
 	    };
 	    const forthMarker =
 	      new google.maps.Marker(forthMarkerElement);
+      //国営昭和記念公園
+      const fifthMarkerElement = {
+        position: {lat:35.703639, lng:139.408446},
+        map: myMap
+      };
+      const fifthMarker =
+        new google.maps.Marker(fifthMarkerElement);
+	}
+}*/
+
+/*function omiseClick(){
+//	  alert("クリックされました");
+
+	    // 多摩動物公園
+	    const firstMarkerElement = {
+	      position: {lat:35.649553, lng:139.402685},
+	      map: myMap
+	    };
+	    const firstMarker =
+	      new google.maps.Marker(firstMarkerElement);
+	    //高幡不動尊金剛寺
+	    const secondMarkerElement = {
+	      position: {lat:35.662392, lng:139.410074},
+	      map: myMap
+	    };
+	    const secondMarker =
+	      new google.maps.Marker(secondMarkerElement);
+	    //京王れーるランド
+	    const thirdMarkerElement = {
+	      position: {lat:35.649082, lng:139.405145},
+	      map: myMap
+	    };
+	    const thirdMarker =
+	      new google.maps.Marker(thirdMarkerElement);
+	    //京王百草園
+	    const forthMarkerElement = {
+	      position: {lat:35.654033, lng:139.427906},
+	      map: myMap
+	    };
+	    const forthMarker =
+	      new google.maps.Marker(forthMarkerElement);
+      //国営昭和記念公園
+      const fifthMarkerElement = {
+        position: {lat:35.703639, lng:139.408446},
+        map: myMap
+      };
+      const fifthMarker =
+        new google.maps.Marker(fifthMarkerElement);
 	}
 
 }*/
