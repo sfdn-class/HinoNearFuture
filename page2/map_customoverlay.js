@@ -27,30 +27,112 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
     this.lng = _lng;
     this.html = _html;
   };
-  const zahyo = new Array();
-  zahyo[0] = new markerzahyo(35.649553, 139.402685,'<p>多摩動物公園</p>');
-  zahyo[1] = new markerzahyo(35.662392, 139.410074,'<p>高幡不動尊金剛寺</p>');
-  zahyo[2] = new markerzahyo(35.649082, 139.405145,'<p>京王れーるランド</p>');
-  zahyo[3] = new markerzahyo(35.654033, 139.427906,'<p>京王百草園</p>');
+  const zahyo_s = new Array();
+  const zahyo_t = new Array();
+  const zahyo_k = new Array();
+  const zahyo_o = new Array();
+  //小学校
+  zahyo_s[0] = new markerzahyo(35.660755, 139.399061,'<p>日野市立南平小学校</p>');
+  zahyo_s[1] = new markerzahyo(35.672864, 139.392949,'<p>日野市立日野第七小学校</p>');
+  zahyo_s[2] = new markerzahyo(35.677445, 139.398456,'<p>日野市立第一小学校</p>');
+  zahyo_s[3] = new markerzahyo(35.649386, 139.386300,'<p>日野市立第六小学校</p>');
+  zahyo_s[4] = new markerzahyo(35.670430, 139.383326,'<p>日野市立日野第五小学校/p>');
+  //中学校
+  zahyo_t[0] = new markerzahyo(35.665463, 139.379835,'<p>日野市立第二中学校</p>');
+  zahyo_t[1] = new markerzahyo(35.661777, 139.369243,'<p>日野市立第四中学校</p>');
+  zahyo_t[2] = new markerzahyo(35.649517, 139.411458,'<p>日野市立日野第三中学校</p>');
+  zahyo_t[3] = new markerzahyo(35.680405, 139.400849,'<p>日野市立日野第一中学校</p>');
+  zahyo_t[4] = new markerzahyo(35.674207, 139.386504,'<p>日野市立大坂上中学校</p>');
+  //観光
+  zahyo_k[0] = new markerzahyo(35.649553, 139.402685,'<p>多摩動物公園</p>');
+  zahyo_k[1] = new markerzahyo(35.662392, 139.410074,'<p>高幡不動尊金剛寺</p>');
+  zahyo_k[2] = new markerzahyo(35.649082, 139.405145,'<p>京王れーるランド</p>');
+  zahyo_k[3] = new markerzahyo(35.654033, 139.427906,'<p>京王百草園</p>');
+  zahyo_k[4] = new markerzahyo(35.704480, 139.412911,'<p>国営昭和記念公園</p>');
+  //お店
+  zahyo_o[0] = new markerzahyo(35.661847, 139.413012,'<p>パティスリー・ドゥ・シェフ・フジウ</p>');
+  zahyo_o[1] = new markerzahyo(35.675650, 139.401977,'<p>うなぎ藤田</p>');
+  zahyo_o[2] = new markerzahyo(35.663495, 139.378703,'<p>ピッコロ レガーロ</p>');
+  zahyo_o[3] = new markerzahyo(35.662478, 139.381441,'<p>アナスドーサビリヤニ</p>');
+  zahyo_o[4] = new markerzahyo(35.661495, 139.414139,'<p>マロニエ京王線高幡不動駅前店</p>');
 
-  const markerElement = [];
-  const InfoWindowElement = [];
-  window.markerArray = new Array();
+  const syougakou_markerElement = [];
+  const tyugakou_markerElement = [];
+  const kankou_markerElement = [];
+  const omise_markerElement = [];
+
+  const syougakou_InfoWindowElement = [];
+  const tyugakou_InfoWindowElement = [];
+  const kankou_InfoWindowElement = [];
+  const omise_InfoWindowElement = [];
+
+  const syougakou_infoWindow = new google.maps.InfoWindow(syougakou_InfoWindowElement);
+  const tyugakou_infoWindow = new google.maps.InfoWindow(tyugakou_InfoWindowElement);
+  const kankou_infoWindow = new google.maps.InfoWindow(kankou_InfoWindowElement);
+  const omise_infoWindow = new google.maps.InfoWindow(omise_InfoWindowElement);
+
+  window.syougakou_markerArray = new Array();
+  window.tyugakou_markerArray = new Array();
+  window.kankou_markerArray = new Array();
+  window.omise_markerArray = new Array();
   window.infoWindowArray = new Array();
 
-  for (let i = 0; i < zahyo.length; i++) {
-      markerElement[i] = {position: {lat:zahyo[i].lat, lng:zahyo[i].lng}};
-      InfoWindowElement[i] = {content:zahyo[i].html};
+  for (let i = 0; i < zahyo_k.length; i++) {
+      syougakou_markerElement[i] = {position: {lat:zahyo_s[i].lat, lng:zahyo_s[i].lng}};
+      tyugakou_markerElement[i] = {position: {lat:zahyo_t[i].lat, lng:zahyo_t[i].lng}};
+      kankou_markerElement[i] = {position: {lat:zahyo_k[i].lat, lng:zahyo_k[i].lng}};
+      omise_markerElement[i] = {position: {lat:zahyo_o[i].lat, lng:zahyo_o[i].lng}};
 
-      window.markerArray.push(new google.maps.Marker(markerElement[i]));
-      window.infoWindowArray.push(new google.maps.InfoWindow(InfoWindowElement[i]));
+      syougakou_InfoWindowElement[i] = {content:zahyo_s[i].html};
+      tyugakou_InfoWindowElement[i] = {content:zahyo_t[i].html};
+      kankou_InfoWindowElement[i] = {content:zahyo_k[i].html};
+      omise_InfoWindowElement[i] = {content:zahyo_o[i].html};
 
-      window.markerArray[i].addListener('click', ()=> { //関数オブジェクトを記述開始
+      window.syougakou_markerArray.push(new google.maps.Marker(syougakou_markerElement[i]));
+      window.tyugakou_markerArray.push(new google.maps.Marker(tyugakou_markerElement[i]));
+      window.kankou_markerArray.push(new google.maps.Marker(kankou_markerElement[i]));
+      window.omise_markerArray.push(new google.maps.Marker(omise_markerElement[i]));
+
+      window.infoWindowArray.push(syougakou_infoWindow);
+      window.infoWindowArray.push(tyugakou_infoWindow);
+      window.infoWindowArray.push(kankou_infoWindow);
+      window.infoWindowArray.push(omise_infoWindow);
+
+      //小学校
+      window.syougakou_markerArray[i].addListener('syougakouClick', ()=> { //関数オブジェクトを記述開始
           window.infoWindowArray.forEach((val,index,array) => {
             val.close();
           });
         //マーカオブジェクトがクリックされた時に，この関数が呼ばれる
-          window.infoWindowArray[i].open(myMap, window.markerArray[i]);
+          window.infoWindowArray[i].open(myMap, window.syougakou_markerArray[i]);
+        }//関数オブジェクト記述ここまで
+      );
+      //中学校
+      window.tyugakou_markerArray[i].addListener('tyugakouClick', ()=> { //関数オブジェクトを記述開始
+          window.infoWindowArray.forEach((val,index,array) => {
+            val.close();
+          });
+        //マーカオブジェクトがクリックされた時に，この関数が呼ばれる
+          window.infoWindowArray[i].open(myMap, window.tyugakou_markerArray[i]);
+        }//関数オブジェクト記述ここまで
+      );
+      //観光
+      window.kankou_markerArray[i].addListener('kankouClick', ()=> { //関数オブジェクトを記述開始
+          window.infoWindowArray.forEach((val,index,array) => {
+            val.close();
+          });
+          window.infoWindowArray[i].open(myMap, window.kankou_markerArray[i]);
+        //マーカオブジェクトがクリックされた時に，この関数が呼ばれる
+          //window.nfoWindowArray[i].open(myMap, window.kankou_markerArray[i]);
+        }//関数オブジェクト記述ここまで
+      );
+      //お店
+      window.omise_markerArray[i].addListener('omiseClick', ()=> { //関数オブジェクトを記述開始
+          window.infoWindowArray.forEach((val,index,array) => {
+            val.close();
+          });
+        //マーカオブジェクトがクリックされた時に，この関数が呼ばれる
+          window.infoWindowArray[i].open(myMap, window.omise_markerArray[i]);
         }//関数オブジェクト記述ここまで
       );
   }
@@ -202,8 +284,23 @@ function e3(){valueAnimationOpen(14);}
 
 
 
+function syougakouClick(){
+//	  alert("クリックされました");
+window.infoWindowArray.forEach((val,index,array) => {val.close();});
+window.syougakou_markerArray.forEach((val,index,array) => {val.setMap(window.myMap);val.setAnimation(google.maps.Animation.DROP);});
+}
+function tyugakouClick(){
+//	  alert("クリックされました");
+window.infoWindowArray.forEach((val,index,array) => {val.close();});
+window.tyugakou_markerArray.forEach((val,index,array) => {val.setMap(window.myMap);val.setAnimation(google.maps.Animation.DROP);});
+}
 function kankouClick(){
 //	  alert("クリックされました");
 window.infoWindowArray.forEach((val,index,array) => {val.close();});
-window.markerArray.forEach((val,index,array) => {val.setMap(window.myMap);val.setAnimation(google.maps.Animation.DROP);});
+window.kankou_markerArray.forEach((val,index,array) => {val.setMap(window.myMap);val.setAnimation(google.maps.Animation.DROP);});
+}
+function omiseClick(){
+//	  alert("クリックされました");
+window.infoWindowArray.forEach((val,index,array) => {val.close();});
+window.omise_markerArray.forEach((val,index,array) => {val.setMap(window.myMap);val.setAnimation(google.maps.Animation.DROP);});
 }
