@@ -65,7 +65,7 @@ body {
 #Question {
 	width:  90%;
   max-width: 48em;
-  height: 4.1em;
+  height: 4em;
 	margin:  auto;
   margin-top: 10px;
   position: relative;
@@ -73,19 +73,42 @@ body {
 }
 
 #choice{
-  padding: 10px auto;
-  width: 100%;
+  width: 90%;
+  max-width: 768px;
+  margin: auto;
+  display: none;
 }
 
-#choice img{
-  width:25%;
-  margin:15px 60px;
+#choice_grid{
+  display: grid;
+  justify-content:space-around;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 #choice h3{
-  padding: 0 100px 10px 100px;
+  font-size: 1em;
 }
 
+#choice .button{
+  color: #2a2a2a;
+  border-radius: 5px;
+  height: 4em;
+}
+
+#choice .markerClear{
+  margin: 0 auto;
+}
+
+#choice .markerClear:link{
+  color: #2a2a2a;
+}
+
+#choice .b_element{background-color: #e6e6e6;}
+#choice .b_j_high{background-color: #e6e6e6;}
+#choice .b_sight{background-color: #e2ebc1;}
+#choice .b_shop{background-color: #c9dfef;}
 
 #item1{
   width: 100%;
@@ -147,12 +170,12 @@ body {
 #map {
   margin: auto;
   width: 90%;
-  height: calc(70vmin);
+  height: 70vh;
 }
 
 #infomation{
   margin: auto;
-  width: 60vw;
+  width: 90%;
   max-width: 768px;
   background-color: #ffffff;
   display:none;
@@ -181,7 +204,6 @@ body {
   margin: auto;
   font-size: 1.5em;
   text-align: left;
-  padding: 10px 10px 0px 10px;
 }
 
 
@@ -327,7 +349,7 @@ height: 100%;
 
 @media screen and (max-width: 768px){
   #Question {
-    height: 8.3em;
+    height: 8em;
   }
   .item{
     grid-template-columns: 1fr 1fr 1fr;
@@ -342,7 +364,7 @@ height: 100%;
   }
 
   #map{
-    height: 60vh;
+    height: 50vh;
   }
 
   #infomation{
